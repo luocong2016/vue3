@@ -1,30 +1,18 @@
-<template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
-</template>
+<script lang="tsx">
+import { defineComponent } from 'vue';
+import { ConfigProvider } from 'ant-design-vue';
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+export default defineComponent({
+  setup() {
+    const popContainer = () => {
+      return document.getElementById('popContainer') as HTMLElement;
+    };
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+    return () => (
+      <ConfigProvider getPopupContainer={popContainer}>
+        <router-view />
+      </ConfigProvider>
+    );
+  },
+});
+</script>
