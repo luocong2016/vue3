@@ -1,5 +1,3 @@
-// Var
-// @/utils/create.ts prefixe
 @prefixe: lc;
 
 // Color Palette
@@ -25,19 +23,19 @@
 @gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
 
 // Component Colors
-@primary-color: var(--lc-blue);
-@success-color: var(--lc-green);
-@danger-color: var(--lc-red);
-@warning-color: var(--lc-orange);
-@text-color: var(--lc-gray-8);
-@text-color-2: var(--lc-gray-6);
-@text-color-3: var(--lc-gray-5);
+@primary-color: var(~"--@{prefixe}-blue");
+@success-color: var(~"--@{prefixe}-green");
+@danger-color: var(~"--@{prefixe}-red");
+@warning-color: var(~"--@{prefixe}-orange");
+@text-color: var(~"--@{prefixe}-gray-8");
+@text-color-2: var(~"--@{prefixe}-gray-6");
+@text-color-3: var(~"--@{prefixe}-gray-5");
 @text-link-color: #576b95;
-@active-color: var(--lc-gray-2);
+@active-color: var(~"--@{prefixe}-gray-2");
 @active-opacity: 0.6;
 @disabled-opacity: 0.5;
-@background-color: var(--lc-gray-1);
-@background-color-light: var(--lc-white);
+@background-color: var(~"--@{prefixe}-gray-1");
+@background-color-light: var(~"--@{prefixe}-white");
 
 // Padding
 @padding-base: 4px;
@@ -70,7 +68,7 @@
 @animation-timing-function-leave: ease-in;
 
 // Border
-@border-color: var(--lc-gray-3);
+@border-color: var(~"--@{prefixe}-gray-3");
 @border-width-base: 1px;
 @border-radius-sm: 2px;
 @border-radius-md: 4px;

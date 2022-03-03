@@ -1,4 +1,5 @@
 // https://github.com/youzan/vant/blob/00bb1d2f1ffc88ec6098a0a293755601a661e3fb/packages/vant/src/popup/Popup.tsx
+// https://github.com/youzan/vant/blob/dev/packages/vant/src/overlay/Overlay.tsx
 import { type WatchSource, ref, watch } from 'vue';
 
 export function useLazyRender(show: WatchSource<boolean | undefined>) {
@@ -16,5 +17,5 @@ export function useLazyRender(show: WatchSource<boolean | undefined>) {
     }
   );
 
-  return (render: () => JSX.Element) => inited.value ? render() : null;
+  return (render: () => JSX.Element) => () => inited.value ? render() : null;
 }

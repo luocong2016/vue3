@@ -1,0 +1,16 @@
+@import '~@/style/var.less';
+
+body {
+  --@{prefixe}-overlay-z-index: 1;
+  --@{prefixe}-overlay-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.@{prefixe}-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(~"--@{prefixe}-overlay-z-index");
+  width: 100%;
+  height: 100%;
+  background: var(~"--@{prefixe}-overlay-background-color");
+}

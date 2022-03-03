@@ -1,14 +1,14 @@
-@import './var.less';
+@import '~@/style/var.less';
 
-:root {
-  --@{prefixe}-empty-padding: @empty-padding;
-  --@{prefixe}-empty-image-size: @empty-image-size;
-  --@{prefixe}-empty-description-margin-top: @empty-description-margin-top;
-  --@{prefixe}-empty-description-padding: @empty-description-padding;
-  --@{prefixe}-empty-description-color: @empty-description-color;
-  --@{prefixe}-empty-description-font-size: @empty-description-font-size;
-  --@{prefixe}-empty-description-line-height: @empty-description-line-height;
-  --@{prefixe}-empty-bottom-margin-top: @empty-bottom-margin-top;
+body {
+  --@{prefixe}-empty-padding: var(~"--@{prefixe}-padding-xl") 0;
+  --@{prefixe}-empty-image-size: 160px;
+  --@{prefixe}-empty-description-margin-top: var(~"--@{prefixe}-padding-md");
+  --@{prefixe}-empty-description-padding: 0 60px;
+  --@{prefixe}-empty-description-color: var(~"--@{prefixe}-text-color-2");
+  --@{prefixe}-empty-description-font-size: var(~"--@{prefixe}-font-size-md");
+  --@{prefixe}-empty-description-line-height: var(~"--@{prefixe}-line-height-md");
+  --@{prefixe}-empty-bottom-margin-top: 24px;
 }
 
 .@{prefixe}-empty {

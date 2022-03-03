@@ -1,8 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-    button
     <!-- 基础用法 -->
     <Empty description="描述文字" />
     <!-- 通用错误 -->
@@ -21,26 +18,49 @@
     <Empty description="描述文字A">
       <button>按钮</button>
     </Empty>
+
+    <br />
+    <button @click="handleSwitch(true)">显示遮罩</button>
+    <Overlay :show="show" @click="handleSwitch(false)" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue";
+import { defineComponent, onMounted, ref, watch } from "vue";
 import { useRoute } from "@/composables/use-route";
 
 import Empty from "@/components/empty";
-import "@/style/base.less";
 import "@/components/empty/index.less";
+
+import Overlay from "@/components/overlay";
+import "@/components/overlay/index.less";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld,
     Empty,
+    Overlay,
   },
-  mounted() {
-    useRoute();
+  setup() {
+    const show = ref(false);
+
+    const handleSwitch = (bool: boolean) => {
+      show.value = bool;
+      console.log(bool);
+    };
+
+    watch(show, (value) => {
+      console.log("show", value);
+    });
+
+    onMounted(() => {
+      useRoute();
+    });
+
+    return {
+      show,
+      handleSwitch,
+    };
   },
 });
 </script>

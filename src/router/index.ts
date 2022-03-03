@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import { Modal } from 'ant-design-vue';
+import { RouterView } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -28,30 +29,38 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/Effect.vue'),
   },
   {
-    path: '/virtual-list',
-    name: 'virtual-list',
-    component: () => import('@/views/VirtualList.vue'),
+    path: '/use',
+    redirect: '/use/useRelation',
+    component: RouterView,
+    children: [
+      {
+        path: 'useRelation',
+        name: '/use/useRelation',
+        component: () => import('@/views/use/useRelation.vue'),
+      },
+      {
+        path: 'useRect',
+        name: '/use/useRect',
+        component: () => import('@/views/use/useRect.vue'),
+      },
+      {
+        path: 'useToggle',
+        name: '/use/useToggle',
+        component: () => import('@/views/use/useToggle.vue'),
+      },
+      {
+        path: 'useScrollParent',
+        name: '/use/useScrollParent',
+        component: () => import('@/views/use/useScrollParent.vue'),
+      },
+      {
+        path: 'usePageVisibility',
+        name: '/use/usePageVisibility',
+        component: () => import('@/views/use/usePageVisibility.vue'),
+      },
+    ]
   },
-  {
-    path: '/use/useRelation',
-    name: '/use/useRelation',
-    component: () => import('@/views/use/useRelation.vue'),
-  },
-  {
-    path: '/use/useRect',
-    name: '/use/useRect',
-    component: () => import('@/views/use/useRect.vue'),
-  },
-  {
-    path: '/use/useToggle',
-    name: '/use/useToggle',
-    component: () => import('@/views/use/useToggle.vue'),
-  },
-  {
-    path: '/use/useScrollParent',
-    name: '/use/useScrollParent',
-    component: () => import('@/views/use/useScrollParent.vue'),
-  },
+
 ];
 
 const router = createRouter({

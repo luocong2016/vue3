@@ -1,4 +1,4 @@
-@import '../var';
+@import '../var.less';
 
 .hairline-common() {
   position: absolute;
@@ -7,7 +7,7 @@
   pointer-events: none;
 }
 
-.hairline(@color: var(--lc-border-color)) {
+.hairline(@color: var(~"--@{prefixe}-border-color")) {
   .hairline-common();
 
   top: -50%;
@@ -18,7 +18,7 @@
   transform: scale(0.5);
 }
 
-.hairline-top(@color: var(--lc-border-color), @left: 0, @right: 0) {
+.hairline-top(@color: var(~"--@{prefixe}-border-color"), @left: 0, @right: 0) {
   .hairline-common();
 
   top: 0;
@@ -28,7 +28,7 @@
   transform: scaleY(0.5);
 }
 
-.hairline-bottom(@color: var(--lc-border-color), @left: 0, @right: 0) {
+.hairline-bottom(@color: var(~"--@{prefixe}-border-color"), @left: 0, @right: 0) {
   .hairline-common();
 
   right: @right;
