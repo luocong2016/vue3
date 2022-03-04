@@ -16,7 +16,7 @@ import {
   prefixe,
 } from '@/utils';
 
-import { useLazyRender } from '@/composables/use-lazy-render';
+import { useLazyRender } from '@/use/useLazyRender';
 import _ from 'lodash';
 
 const [name, bem] = createNamespace('overlay');

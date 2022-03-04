@@ -3,7 +3,7 @@
 
 import { type Ref } from 'vue';
 import { type BEM } from '@/utils/create';
-import { useHeight } from './use-height';
+import { useHeight } from '../useHeight';
 
 export function usePlaceholder(contentRef: Ref<Element | undefined>, bem: BEM) {
   const height = useHeight(contentRef);

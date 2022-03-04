@@ -1,7 +1,7 @@
 // https://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html
 
 import { type Ref, onDeactivated, onBeforeUnmount } from 'vue';
-import { onMountedOrActivated } from '@/use'
+import { onMountedOrActivated } from '../onMountedOrActivated';
 import { inBrowser } from '@/utils';
 
 export function useVisibilityChange(

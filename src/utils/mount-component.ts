@@ -1,7 +1,7 @@
 // https://github.com/youzan/vant/blob/00bb1d2f1ffc88ec6098a0a293755601a661e3fb/packages/vant/src/dialog/function-call.tsx
 import _ from 'lodash';
 import { type Component, createApp, reactive } from 'vue';
-import { useExpose } from '@/composables/use-expose';
+import { useExpose } from '@/use/useExpose';
 
 export function usePopupState() {
   const state = reactive<{ show: boolean, [key: string]: any; }>({ show: false });
