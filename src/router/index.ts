@@ -9,11 +9,6 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/Home.vue'),
   },
   {
-    path: '/pi',
-    name: 'pi',
-    component: () => import('@/views/Provide-inject.vue'),
-  },
-  {
     path: '/style-css',
     name: 'style-css',
     component: () => import('@/views/Style-css.vue'),

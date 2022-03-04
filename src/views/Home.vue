@@ -20,11 +20,12 @@
     </Empty>
 
     <br />
-    <button @click="handleSwitch(true)">显示遮罩</button>
-    <Overlay :show="show" @click="handleSwitch(false)" />
+    <!-- 基础用法 -->
+    <button @click="show = true">显示遮罩</button>
+    <Overlay :show="show" @click="show = false" />
 
     <br />
-
+    <!-- 基础用法 -->
     <div class="demo-badge">
       <Badge :content="5">
         <div class="child" />
@@ -40,6 +41,7 @@
       </Badge>
     </div>
 
+    <!-- 自定义徽标位置 -->
     <div class="demo-badge">
       <Badge position="top-left" content="8">
         <div class="child" />
@@ -55,6 +57,7 @@
       </Badge>
     </div>
 
+    <!-- 独立展示 -->
     <div class="demo-badge">
       <Badge :content="20" />
       <Badge :content="20" color="#1989fa" />
@@ -64,9 +67,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, watch } from "vue";
-import { useRoute } from "@/composables/use-route";
-
+import { defineComponent, ref } from "vue";
 import { Badge, Empty, Overlay } from "@/components";
 
 export default defineComponent({
@@ -77,22 +78,8 @@ export default defineComponent({
   setup() {
     const show = ref(false);
 
-    const handleSwitch = (bool: boolean) => {
-      show.value = bool;
-      console.log(bool);
-    };
-
-    watch(show, (value) => {
-      console.log("show", value);
-    });
-
-    onMounted(() => {
-      useRoute();
-    });
-
     return {
       show,
-      handleSwitch,
     };
   },
 });

@@ -1,3 +1,3 @@
-export { default as Badge } from './badge';
-export { default as Empty } from './empty';
-export { default as Overlay } from './overlay';
+export * as Badge from './badge';
+export * as Empty from './empty';
+export * as Overlay from './overlay';
