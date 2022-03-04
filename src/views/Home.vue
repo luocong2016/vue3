@@ -67,22 +67,13 @@
 import { defineComponent, onMounted, ref, watch } from "vue";
 import { useRoute } from "@/composables/use-route";
 
-import Empty from "@/components/empty";
-import "@/components/empty/index.less";
-
-import Overlay from "@/components/overlay";
-import "@/components/overlay/index.less";
-
-import Badge from "@/components/badge";
-import "@/components/badge/index.less";
+import { Badge, Empty, Overlay } from "@/components";
 
 export default defineComponent({
   name: "Home",
-  components: {
-    Empty,
-    Overlay,
-    Badge,
-  },
+
+  components: { Badge, Empty, Overlay },
+
   setup() {
     const show = ref(false);
 

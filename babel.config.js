@@ -9,6 +9,16 @@ module.exports = {
         libraryDirectory: 'es',
         style: true,
       },
+      'ant-design-vue'
     ],
+    [
+      'import',
+      {
+        libraryName: '@/components',
+        libraryDirectory: '',
+        style: (name) => `${name}/index.less`
+      },
+      '@/components'
+    ]
   ],
 };

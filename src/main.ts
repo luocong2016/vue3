@@ -12,4 +12,7 @@ import '@/style/base.less';
 // use `mock`
 import '@/mock';
 
-createApp(App).use(store).use(router).mount('#app');
+createApp(App)
+  .use(store)
+  .use(router)
+  .mount('#app');
