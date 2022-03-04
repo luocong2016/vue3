@@ -7,3 +7,4 @@ export * from './create';
 export * from './validate';
 export * from './format';
 export * from './with-install';
+export * from './animationFrame';

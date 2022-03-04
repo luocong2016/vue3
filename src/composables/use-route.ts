@@ -1,5 +1,12 @@
-import { type ExtractPropTypes, type ComponentPublicInstance, type PropType, getCurrentInstance } from 'vue';
-import { type RouteLocationRaw } from 'vue-router';
+import {
+  getCurrentInstance,
+  type ExtractPropTypes,
+  type ComponentPublicInstance,
+  type PropType,
+} from 'vue';
+import {
+  type RouteLocationRaw
+} from 'vue-router';
 
 export const routeProps = {
   to: [String, Object] as PropType<RouteLocationRaw>,
@@ -9,12 +16,14 @@ export const routeProps = {
 
 export type RouteProps = ExtractPropTypes<typeof routeProps>
 
-export function route({
-  to,
-  url,
-  replace,
-  $router: router,
-}: ComponentPublicInstance<RouteProps>) {
+export function route(
+  {
+    to,
+    url,
+    replace,
+    $router: router,
+  }: ComponentPublicInstance<RouteProps>
+) {
   if (to && router) {
     router[replace ? 'replace' : 'push'](to);
   } else if (url) {

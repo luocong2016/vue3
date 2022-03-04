@@ -9,11 +9,6 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/Home.vue'),
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('@/views/user/Info.vue'),
-  },
-  {
     path: '/pi',
     name: 'pi',
     component: () => import('@/views/Provide-inject.vue'),

@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 import { inBrowser } from '@/utils';
-import { useEventListener } from './useEventListener';
+import { useEventListener } from '../useEventListener';
 
 export function usePageVisibility() {
   const visibility = ref<VisibilityState>('visible');

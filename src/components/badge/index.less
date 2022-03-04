@@ -1,0 +1,74 @@
+@import '~@/style/var.less';
+
+body {
+  --@{prefixe}-badge-size: 16px;
+  --@{prefixe}-badge-color: var(~"--@{prefixe}-white");
+  --@{prefixe}-badge-padding: 0 3px;
+  --@{prefixe}-badge-font-size: var(~"--@{prefixe}-font-size-sm");
+  --@{prefixe}-badge-font-weight: var(~"--@{prefixe}-font-bold");
+  --@{prefixe}-badge-border-width: var(~"--@{prefixe}-border-width");
+  --@{prefixe}-badge-background: var(~"--@{prefixe}-danger-color");
+  --@{prefixe}-badge-dot-color: var(~"--@{prefixe}-danger-color");
+  --@{prefixe}-badge-dot-size: 8px;
+  --@{prefixe}-badge-font: -apple-system-font, helvetica neue, arial, sans-serif;
+}
+
+.@{prefixe}-badge {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: var(~"--@{prefixe}-badge-size");
+  padding: var(~"--@{prefixe}-badge-padding");
+  color: var(~"--@{prefixe}-badge-color");
+  font-weight: var(~"--@{prefixe}-badge-font-weight");
+  font-size: var(~"--@{prefixe}-badge-font-size");
+  font-family: var(~"--@{prefixe}-badge-font");
+  line-height: 1.2;
+  text-align: center;
+  background: var(~"--@{prefixe}-badge-background");
+  border: var(~"--@{prefixe}-badge-border-width") solid var(~"--@{prefixe}-background-2");
+  border-radius: var(~"--@{prefixe}-radius-max");
+
+  &--fixed {
+    position: absolute;
+    transform-origin: 100%;
+  }
+
+  &--top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &--top-right {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  &--bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+  }
+
+  &--bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+  }
+
+  &--dot {
+    width: var(~"--@{prefixe}-badge-dot-size");
+    min-width: 0;
+    height: var(~"--@{prefixe}-badge-dot-size");
+    background: var(~"--@{prefixe}-badge-dot-color");
+    border-radius: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
+}
