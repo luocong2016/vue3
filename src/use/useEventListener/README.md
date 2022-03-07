@@ -1,12 +1,13 @@
 # useEventListener
+方便地进行事件绑定，在组件`mounted`和`activated`时绑定事件，`unmounted`和`deactivated`时解绑事件。
 
 ## Usage
 ### 基础用法
 ```ts
-import { ref } from 'vue';
+import { defineComponent } from 'vue';
 import { useEventListener } from '@/use';
 
-export defualt {
+export defualt defineComponent({
   setup() {
     // 在 window 上绑定 resize 事件
     // 未指定监听对象时，默认会监听 window 的事件
@@ -28,7 +29,7 @@ export defualt {
       }
     );
   }
-};
+});
 ```
 
 ## API

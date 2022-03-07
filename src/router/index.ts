@@ -24,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
     component: RouterView,
     children: [
       {
+        path: 'useLazyRender',
+        name: '/use/useLazyRender',
+        component: () => import('@/views/use/useLazyRender.vue'),
+      },
+      {
         path: 'useRelation',
         name: '/use/useRelation',
         component: () => import('@/views/use/useRelation.vue'),

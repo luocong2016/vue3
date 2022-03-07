@@ -4,10 +4,10 @@
 ## Usage
 ### 基础用法
 ```ts
-import { ref } from 'vue';
+import { defineComponent } from 'vue';
 import { onMountedOrActivated } from '@/use';
 
-export defualt {
+export defualt defineComponent ({
   setup() {
     // `vue-router`切换至当前可见激活
     onMountedOrActivated(
@@ -16,7 +16,7 @@ export defualt {
       }
     );
   }
-};
+});
 ```
 
 ## API
