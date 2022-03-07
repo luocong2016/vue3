@@ -1,4 +1,4 @@
-import { RouterHistory, RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
+import { RouterHistory, RouteRecordRaw, RouterScrollBehavior } from 'vue-router';
 
 export type RouterOptions = {
   history: RouterHistory,
