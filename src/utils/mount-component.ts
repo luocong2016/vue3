@@ -20,6 +20,11 @@ export function usePopupState() {
   return { open, close, toggle, state };
 }
 
+/**
+ * 应用下挂载`vue`组件
+ * @param RootComponent Vnode
+ * @returns 
+ */
 export function mountComponent(RootComponent: Component) {
   const app = createApp(RootComponent);
   const root = document.createElement('div');
