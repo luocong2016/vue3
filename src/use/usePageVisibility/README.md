@@ -3,7 +3,7 @@
 
 ## Usage
 ### 基础用法
-```ts
+```tsx
 import { defineComponent, watch } from 'vue';
 import { usePageVisibility } from '@/use';
 

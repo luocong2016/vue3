@@ -4,7 +4,7 @@ import { type Ref, onDeactivated, onBeforeUnmount } from 'vue';
 import { onMountedOrActivated } from '../onMountedOrActivated';
 import { inBrowser } from '@/utils';
 
-export function useVisibilityChange(
+export function useVisibility(
   target: Ref<Element | undefined>,
   onChange: (visible: boolean) => void
 ) {

@@ -3,7 +3,7 @@
 
 ## Usage
 ### 基础用法
-```ts
+```tsx
 import { reactive } from 'vue';
 import { useExpose } from '@/use';
 

@@ -16,6 +16,7 @@ export const routeProps = {
 
 export type RouteProps = ExtractPropTypes<typeof routeProps>
 
+// https://router.vuejs.org/zh/api/#to
 export function route(
   {
     to,

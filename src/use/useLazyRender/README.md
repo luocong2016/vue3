@@ -5,7 +5,7 @@
 ### 基础用法
 ```tsx
 import { defineComponent, ref } from "vue";
-import { useLazyRender } from "@/use/useLazyRender";
+import { useLazyRender } from "@/use";
 
 export default defineComponent({
   setup() {

@@ -24,6 +24,21 @@ const routes: Array<RouteRecordRaw> = [
     component: RouterView,
     children: [
       {
+        path: 'useVisibility',
+        name: '/use/useVisibility',
+        component: () => import('@/views/use/useVisibility.vue'),
+      },
+      {
+        path: 'useRoute',
+        name: '/use/useRoute',
+        component: () => import('@/views/use/useRoute.vue'),
+      },
+      {
+        path: 'usePlaceholder',
+        name: '/use/usePlaceholder',
+        component: () => import('@/views/use/usePlaceholder.vue'),
+      },
+      {
         path: 'useLazyRender',
         name: '/use/useLazyRender',
         component: () => import('@/views/use/useLazyRender.vue'),

@@ -3,9 +3,9 @@
 
 ## Usage
 ### 基础用法
-```ts
+```tsx
 import { defineComponent, ref } from 'vue';
-import { useHeight } from '@/use/useHeight';
+import { useHeight } from '@/use';
 
 export default defineComponent({
   setup() {
@@ -26,9 +26,9 @@ function useHeight (element: Element | Ref<Element | undefined>): Ref<number>;
 ```
 
 ### Params
-| 参数    | 说明     | 类型                                  | 默认值 |
-|---------|----------|---------------------------------------|--------|
-| element | 目标元素 | ELement \| Ref\<Element \| undefined> | -      |
+| 参数    | 说明     | 类型                       | 默认值 |
+|---------|----------|----------------------------|--------|
+| element | 目标元素 | Element \| Ref\<Element \> | -      |
 
 ### Returns
 | 参数   | 说明         | 类型          | 默认值 |

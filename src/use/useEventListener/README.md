@@ -3,7 +3,7 @@
 
 ## Usage
 ### 基础用法
-```ts
+```tsx
 import { defineComponent } from 'vue';
 import { useEventListener } from '@/use';
 

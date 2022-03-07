@@ -1,11 +1,6 @@
-# useRoute
-通过透传`vue-router`所需的`to`、`url`、`replace`、`$router`属性，实现路由跳转
-
-## Usage
-### 基础用法
-```tsx
+<script lang="tsx">
 import { defineComponent } from "vue";
-import { useRoute } from "@/use";
+import { useRoute } from "@/use/useRoute";
 
 export default defineComponent({
   props: {
@@ -17,7 +12,6 @@ export default defineComponent({
 
   setup() {
     const route = useRoute();
-
     return () => (
       <div>
         <button onClick={route}>Route</button>
@@ -25,10 +19,4 @@ export default defineComponent({
     );
   },
 });
-```
-
-## API
-### Types
-```ts
-function useRoute(): () => void;
-```
+</script>
