@@ -146,7 +146,6 @@ import type { ${camelCaseName}Props } from '@/components/${componentName}';
 ### CSS Variables
 | 名称 | 默认值 | 描述 |
 |---|---|---|
-
     `
   },
 ];
