@@ -23,9 +23,11 @@ const fileSave = require('file-save');
 const camelize = (str) => {
   const name = str.replace(/-(\w)/g, (_, c) => c.toUpperCase());
   return name.slice(0, 1).toUpperCase() + name.slice(1)
-}
+};
+const smallHump = (str) => str.replace(/-(\w)/g, (_, c) => c.toUpperCase());
 
 const componentName = process.argv[2];
+const smallHumpComponentName = smallHump(componentName);
 const camelCaseName = camelize(componentName);
 const componentsPath = path.join(__dirname, '../src/components', componentName);
 
@@ -47,18 +49,18 @@ const Files = [
 
 import { truthProp, numericProp, makeStringProp, createNamespace } from '@/utils';
 
-const ${componentName}Props = {
+const ${smallHumpComponentName}Props = {
 
 };
 
-const [name, bem] = createNamespace('badge');
+const [name, bem] = createNamespace('${componentName}');
 
-export type ${camelCaseName}Props = ExtractPropTypes<typeof ${componentName}Props>;
+export type ${camelCaseName}Props = ExtractPropTypes<typeof ${smallHumpComponentName}Props>;
 
 export default defineComponent({
   name,
 
-  props: ${componentName}Props,
+  props: ${smallHumpComponentName}Props,
 
   setup(props, { slots }) {
     return {}
@@ -157,5 +159,12 @@ Files.forEach(
       .end('\n');
   }
 );
+
+const install = process.argv[3];
+if (install && install === 'install') {
+  const componentsIndex = path.join(__dirname, '../src/components/index.ts');
+  const insert = `export * as ${camelCaseName} from './${componentName}'`;
+  fs.appendFileSync(componentsIndex, insert);
+}
 
 console.log('DONE!');

@@ -79,15 +79,15 @@ export default defineComponent({
 
 ## API
 ### Props
-| 参数      | 说明                                                                   | 类型                                   | 默认值      | 版本      |
-|-----------|------------------------------------------------------------------------|----------------------------------------|-------------|-----------|
-| color     | 徽标背景颜色                                                           | _string_                               | -           | `#ee0a24` |
-| dot       | 是否展示为小红点                                                       | _boolean_                              | `false`     | -         |
-| max       | 最大值，超过最大值会显示 {max}+，仅当 content 为数字时有效             | _number \| string_                     | -           | -         |
-| offset    | 设置徽标的偏移量，数组的两项分别对应水平和垂直方向的偏移量，默认单位为 | _[number \| string, number \| string]_ | -           | -         |
-| position  | 徽标位置，可选值为`top-left` `bottom-left` `bottom-right`              | _string_                               | `top-right` | -         |
-| show-zero | 当 content 为数字 0 时，是否展示徽标                                   | _boolean_                              | `true`      | -         |
-| tontent   | 徽标内容                                                               | _number \| string_                     | -           | -         |
+| 参数      | 说明                                                                   | 类型                                   | 默认值      | 版本 |
+|-----------|------------------------------------------------------------------------|----------------------------------------|-------------|------|
+| color     | 徽标背景颜色                                                           | _string_                               | `#ee0a24`   | -    |
+| dot       | 是否展示为小红点                                                       | _boolean_                              | `false`     | -    |
+| max       | 最大值，超过最大值会显示 {max}+，仅当 content 为数字时有效             | _number \| string_                     | -           | -    |
+| offset    | 设置徽标的偏移量，数组的两项分别对应水平和垂直方向的偏移量，默认单位为 | _[number \| string, number \| string]_ | -           | -    |
+| position  | 徽标位置，可选值为`top-left` `bottom-left` `bottom-right`              | _string_                               | `top-right` | -    |
+| show-zero | 当 content 为数字 0 时，是否展示徽标                                   | _boolean_                              | `true`      | -    |
+| tontent   | 徽标内容                                                               | _number \| string_                     | -           | -    |
 
 ### Slots
 | 名称    | 说明             | 版本 |
