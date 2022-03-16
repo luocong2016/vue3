@@ -3,6 +3,8 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+import icons from './icons'
+
 // use `moment` language zh-cn
 import 'moment/locale/zh-cn';
 
@@ -13,6 +15,7 @@ import '@/style/base.less';
 import '@/mock';
 
 createApp(App)
+  .use(icons)
   .use(store)
   .use(router)
   .mount('#app');

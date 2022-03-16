@@ -1,4 +1,13 @@
-import type { PropType } from 'vue';
+import { type VNode, type VNodeChild, type PropType, type Slot } from 'vue';
+
+export type CustomRender =
+  | string | null | undefined
+  | Slot | VNodeChild | VNode
+  | ((...props: any[]) => Slot)
+  | ((...props: any[]) => VNodeChild)
+  | ((...props: any[]) => VNode)
+  | VNode[]
+  | JSX.Element;
 
 export const unknownProp = null as unknown as PropType<unknown>;
 

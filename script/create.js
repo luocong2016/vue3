@@ -42,9 +42,9 @@ const Files = [
   {
     filename: `${camelCaseName}.tsx`,
     content: `import {
-      defineComponent,
-      type PropType,
-      type ExtractPropTypes,
+  defineComponent,
+  type PropType,
+  type ExtractPropTypes,
 } from 'vue';
 
 import { truthProp, numericProp, makeStringProp, createNamespace } from '@/utils';
@@ -163,7 +163,7 @@ Files.forEach(
 const install = process.argv[3];
 if (install && install === 'install') {
   const componentsIndex = path.join(__dirname, '../src/components/index.ts');
-  const insert = `export * as ${camelCaseName} from './${componentName}'`;
+  const insert = `export * as ${camelCaseName} from './${componentName}';\n`;
   fs.appendFileSync(componentsIndex, insert);
 }
 
